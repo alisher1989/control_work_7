@@ -15,7 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from webapp.views import IndexView, PollView, TaskCreateView, TaskUpdateView, \
+    TaskDeleteView, StatusesView, StatusCreateView, StatusUpdateView, StatusDeleteView, TypesView, TypeCreateView, \
+    TypeUpdateView, TypeDeleteView, ProjectsView, ProjectView, ProjectCreateView, ProjectUpdateView, ProjectDeleteView
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', IndexView.as_view(), name='index'),
 ]
