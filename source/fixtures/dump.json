@@ -48,11 +48,27 @@
   }
 },
 {
+  "model": "webapp.poll",
+  "pk": 7,
+  "fields": {
+    "question": "Woolwich Arsenal to The Arsenal",
+    "created_at": "2019-10-19T08:00:50.607Z"
+  }
+},
+{
+  "model": "webapp.poll",
+  "pk": 8,
+  "fields": {
+    "question": "Arsenal",
+    "created_at": "2019-10-19T08:27:48.580Z"
+  }
+},
+{
   "model": "webapp.choice",
   "pk": 1,
   "fields": {
-    "text": "asf",
-    "poll": 1
+    "text": "Cliff Bastin and Eddie Hapgood",
+    "poll": 8
   }
 },
 {
@@ -93,6 +109,101 @@
   "fields": {
     "text": "club in the world, earned \u20ac487.6m in 2016\u201317 season.",
     "poll": 1
+  }
+},
+{
+  "model": "webapp.choice",
+  "pk": 7,
+  "fields": {
+    "text": "First Division football",
+    "poll": 6
+  }
+},
+{
+  "model": "webapp.choice",
+  "pk": 8,
+  "fields": {
+    "text": "Transformed, Chapman's Arsenal claimed their first national trophy, the FA Cup",
+    "poll": 8
+  }
+},
+{
+  "model": "webapp.choice",
+  "pk": 9,
+  "fields": {
+    "text": "1953\u20131986: Mediocrity, Mee and Neill",
+    "poll": 7
+  }
+},
+{
+  "model": "webapp.choice",
+  "pk": 10,
+  "fields": {
+    "text": "Some Text to test",
+    "poll": 8
+  }
+},
+{
+  "model": "webapp.answer",
+  "pk": 1,
+  "fields": {
+    "poll": 1,
+    "created_at": "2019-10-19T08:23:15.156Z",
+    "choice": null
+  }
+},
+{
+  "model": "webapp.answer",
+  "pk": 2,
+  "fields": {
+    "poll": 1,
+    "created_at": "2019-10-19T08:24:46.933Z",
+    "choice": null
+  }
+},
+{
+  "model": "webapp.answer",
+  "pk": 3,
+  "fields": {
+    "poll": 3,
+    "created_at": "2019-10-19T09:20:06.750Z",
+    "choice": null
+  }
+},
+{
+  "model": "webapp.answer",
+  "pk": 4,
+  "fields": {
+    "poll": 8,
+    "created_at": "2019-10-19T09:35:01.627Z",
+    "choice": null
+  }
+},
+{
+  "model": "webapp.answer",
+  "pk": 5,
+  "fields": {
+    "poll": 8,
+    "created_at": "2019-10-19T13:13:30.035Z",
+    "choice": 1
+  }
+},
+{
+  "model": "webapp.answer",
+  "pk": 6,
+  "fields": {
+    "poll": 8,
+    "created_at": "2019-10-19T13:14:02.463Z",
+    "choice": 8
+  }
+},
+{
+  "model": "webapp.answer",
+  "pk": 7,
+  "fields": {
+    "poll": 7,
+    "created_at": "2019-10-19T13:14:47.220Z",
+    "choice": 9
   }
 },
 {
