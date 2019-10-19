@@ -15,12 +15,20 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from webapp.views import IndexView, PollView, TaskCreateView, TaskUpdateView, \
-    TaskDeleteView, StatusesView, StatusCreateView, StatusUpdateView, StatusDeleteView, TypesView, TypeCreateView, \
-    TypeUpdateView, TypeDeleteView, ProjectsView, ProjectView, ProjectCreateView, ProjectUpdateView, ProjectDeleteView
+from webapp.views import IndexView, PollView, PollCreateView, PollUpdateView, \
+    PollDeleteView, ChoiceView, ChoiceCreateView, ChoiceUpdateView, ChoiceDeleteView, ChoiceDetailView
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', IndexView.as_view(), name='index'),
+    path('poll/<int:pk>/', PollView.as_view(), name='poll_view'),
+    path('poll/add/', PollCreateView.as_view(), name='poll_add'),
+    path('poll/<int:pk>/update/', PollUpdateView.as_view(), name='poll_update'),
+    path('poll/<int:pk>/delete/', PollDeleteView.as_view(), name='poll_delete'),
+    path('choice/', ChoiceView.as_view(), name='choices_view'),
+    path('choice/<int:pk>/', ChoiceDetailView.as_view(), name='choice_view'),
+    path('choice/add/', ChoiceCreateView.as_view(), name='choice_add'),
+    path('choice/<int:pk>/update/', ChoiceUpdateView.as_view(), name='choice_update'),
+    path('choice/<int:pk>/delete/', ChoiceDeleteView.as_view(), name='choice_delete'),
 ]
