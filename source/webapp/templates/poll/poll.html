@@ -4,6 +4,7 @@
     <li><a href="{% url 'poll_update' poll.pk %}">Edit</a></li>
     <li><a href="{% url 'poll_delete' poll.pk %}">Delete</a></li>
     <li><a href="{% url 'poll_add' %}">Add Poll</a></li>
+
 {% endblock %}
 {% block content %}
     <h1>{{ poll.question}}</h1>
@@ -23,6 +24,7 @@
                 <a href="{% url 'choice_update' choice.pk %}"><i class="fas fa-edit"></i></a>
                 <a href="{% url 'choice_delete' choice.pk %}"><i class="fas fa-trash"></i></a>
                 <a href="{% url 'choice_add' %}"><i class="fas fa-plus-square"></i></a>
+                <li><a href="{% url 'answers_view' poll.pk %}">Answers</a></li>
             </div>
             <hr>
         {% empty %}
