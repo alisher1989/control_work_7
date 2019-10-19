@@ -2,6 +2,7 @@
 {% block menu %}
     <li><a href="{% url 'poll_add' %}">Add Poll</a></li>
     <li><a href="{% url 'choices_view' %}">Choices</a></li>
+    <li><a href="{% url 'answers_view' %}">Answers</a></li>
 {% endblock %}
 {% block content %}
     <h1 class="mt-3">Statistics</h1>
@@ -21,6 +22,7 @@
                         </h2></a>
                         <a href="{% url 'poll_update' poll.pk %}"><i class="fas fa-edit"></i></a>
                         <a href="{% url 'poll_delete' poll.pk %}"><i class="fas fa-trash"></i></a>
+                        <li><a href="{% url 'choice_add' %}">Add choice</a></li>
                         <p class="card-text">{{ poll.get_category_display }}</p>
                     </div>
                 </div>

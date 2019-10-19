@@ -45,4 +45,4 @@ class ChoiceDeleteView(DeleteView):
     model = Choice
     template_name = 'choice/delete.html'
     context_object_name = 'choice'
-    success_url = reverse_lazy('index')
+    success_url = reverse_lazy('poll_view')

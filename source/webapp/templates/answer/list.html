@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block title %}{{ answers }}{% endblock %}
+
+{% block menu %}
+    <li><a href="{% url 'choices_view' %}">Choices</a></li>
+    <li><a href="{% url 'index' %}">Home</a></li>
+{% endblock %}
+
+{% block content %}
+    <h1>Poll</h1>
+    {% for answer in answers%}
+        <p><b>{{ answer.poll.question }}</b></p>
+        <form action="" method="post">
+        {% for choice in answer.poll.polls_choice.all %}
+            <input type="radio" name="option" value="choice">
+                <div class="pre">{{ choice }}</div>
+        {% endfor %}
+        <p><input type="submit" value="Submit"></p>
+            </form>
+    {% endfor %}
+    <hr/>
+    {% if is_paginated %}
+        {% include 'partial/pagination.html' %}
+    {% endif %}
+    {% if is_paginated %}
+        {% include 'partial/pagination.html' %}
+    {% endif %}
+{% endblock %}
